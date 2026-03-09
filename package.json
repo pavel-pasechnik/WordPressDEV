@@ -1,0 +1,36 @@
+{
+  "name": "wordpressdev",
+  "version": "1.0.0",
+  "description": "**Semantic Personal Publishing Platform**",
+  "main": "index.js",
+  "scripts": {
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:css:fix": "stylelint \"**/*.css\" --fix",
+    "lint:js": "eslint \"**/*.js\"",
+    "lint:js:fix": "eslint \"**/*.js\" --fix",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavel-pasechnik/WordPressDEV.git"
+  },
+  "keywords": [],
+  "author": "Pavlo Pasichnyk <pavel.pasechnik@icloud.com>",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pavel-pasechnik/WordPressDEV/issues"
+  },
+  "homepage": "https://github.com/pavel-pasechnik/WordPressDEV#readme",
+  "devDependencies": {
+    "stylelint": "^13.0.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-config-wordpress": "^17.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^3.2.0"
+  }
+}
