@@ -39,7 +39,7 @@ require_once $sqlite_plugin_implementation_folder_path . '/wp-includes/sqlite/db
 // Activate the performance-lab plugin if it is not already activated.
 add_action(
 	'admin_footer',
-	function() {
+	function () {
 		if ( defined( 'SQLITE_MAIN_FILE' ) ) {
 			return;
 		}

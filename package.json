@@ -1,36 +1,63 @@
 {
-  "name": "wordpressdev",
-  "version": "1.0.0",
-  "description": "**Semantic Personal Publishing Platform**",
-  "main": "index.js",
-  "scripts": {
-    "lint:css": "stylelint \"**/*.css\"",
-    "lint:css:fix": "stylelint \"**/*.css\" --fix",
-    "lint:js": "eslint \"**/*.js\"",
-    "lint:js:fix": "eslint \"**/*.js\" --fix",
-    "format": "prettier --write ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pavel-pasechnik/WordPressDEV.git"
-  },
-  "keywords": [],
-  "author": "Pavlo Pasichnyk <pavel.pasechnik@icloud.com>",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/pavel-pasechnik/WordPressDEV/issues"
-  },
-  "homepage": "https://github.com/pavel-pasechnik/WordPressDEV#readme",
-  "devDependencies": {
-    "stylelint": "^13.0.0",
-    "stylelint-config-standard": "^22.0.0",
-    "stylelint-config-wordpress": "^17.0.0",
-    "eslint": "^8.0.1",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-n": "^16.0.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "prettier": "^3.2.0"
-  }
+	"name": "wordpressdev",
+	"version": "1.0.0",
+	"description": "**Semantic Personal Publishing Platform**",
+	"main": "index.js",
+	"scripts": {
+		"lint:css": "stylelint \"wp-content/themes/**/*.css\" \"wp-content/plugins/theme-check/**/*.css\" --allow-empty-input",
+		"lint:css:fix": "stylelint \"wp-content/themes/**/*.css\" \"wp-content/plugins/theme-check/**/*.css\" --fix --allow-empty-input",
+		"lint:html": "htmlhint --config .htmlhintrc.json \"wp-content/themes/**/*.html\"",
+		"lint:js": "eslint \"wp-content/themes/**/*.js\" \"wp-content/plugins/theme-check/**/*.js\" --no-error-on-unmatched-pattern",
+		"lint:js:fix": "eslint \"wp-content/themes/**/*.js\" \"wp-content/plugins/theme-check/**/*.js\" --fix --no-error-on-unmatched-pattern",
+		"lint:php": "composer lint:php --",
+		"lint:php:fix": "composer lint:php:fix --",
+		"lint:php:templates": "composer lint:php:templates",
+		"lint:php:templates:fix": "composer lint:php:templates:fix",
+		"format": "prettier --write .",
+		"format:check": "prettier --check ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pavel-pasechnik/WordPressDEV.git"
+	},
+	"keywords": [],
+	"author": "Pavlo Pasichnyk <pavel.pasechnik@icloud.com>",
+	"license": "ISC",
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/pavel-pasechnik/WordPressDEV/issues"
+	},
+	"homepage": "https://github.com/pavel-pasechnik/WordPressDEV#readme",
+	"dependencies": {
+		"@eslint/eslintrc": "^2.1.4"
+	},
+	"devDependencies": {
+		"@babel/eslint-parser": "^7.28.6",
+		"@prettier/plugin-xml": "^3.4.2",
+		"@typescript-eslint/eslint-plugin": "^8.57.0",
+		"@typescript-eslint/parser": "^8.57.0",
+		"@wordpress/eslint-plugin": "^24.3.0",
+		"@wordpress/stylelint-config": "^23.33.0",
+		"eslint": "^8.57.1",
+		"eslint-import-resolver-typescript": "^4.4.4",
+		"eslint-plugin-import": "^2.32.0",
+		"eslint-plugin-jest": "^29.15.0",
+		"eslint-plugin-jsdoc": "^62.7.1",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-n": "^17.24.0",
+		"eslint-plugin-playwright": "^2.9.0",
+		"eslint-plugin-prettier": "^5.5.5",
+		"eslint-plugin-promise": "^7.2.1",
+		"eslint-plugin-react": "^7.37.5",
+		"eslint-plugin-react-hooks": "^7.0.1",
+		"globals": "^17.4.0",
+		"htmlhint": "^1.9.2",
+		"prettier": "^3.8.1",
+		"stylelint": "^16.26.1"
+	},
+	"overrides": {
+		"@typescript-eslint/typescript-estree": {
+			"minimatch": "9.0.7"
+		}
+	}
 }

@@ -1,0 +1,6 @@
+node_modules/
+vendor/
+wp-admin/
+wp-includes/
+wp-content/languages/
+**/*.min.css
